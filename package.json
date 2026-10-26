@@ -1,0 +1,39 @@
+{
+  "name": "appium-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "wdio run ./wdio.conf.ts",
+    "typecheck": "tsc --noEmit",
+    "appium": "appium --address 127.0.0.1 --port 4723",
+    "driver:install": "appium driver install uiautomator2",
+    "doctor": "appium driver doctor uiautomator2",
+    "android": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/start-emulator.ps1",
+    "android:headless": "npm run android -- -Headless",
+    "android:check": "npm run android -- -Check"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@wdio/appium-service": "^10.1.0",
+    "@wdio/cli": "^10.1.0",
+    "@wdio/globals": "^10.1.0",
+    "@wdio/local-runner": "^10.1.0",
+    "@wdio/mocha-framework": "^10.1.0",
+    "@wdio/spec-reporter": "^10.1.0",
+    "@wdio/types": "^10.1.0",
+    "appium": "^3.8.0",
+    "appium-uiautomator2-driver": "^8.7.0",
+    "dotenv": "^18.0.9",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "body-parser": "^2.4.0",
+    "shell-quote": "^1.11.0"
+  }
+}

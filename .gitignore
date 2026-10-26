@@ -1,0 +1,8 @@
+node_modules/
+.env
+.appium/
+.android-avd/
+logs/
+reports/
+apps/*.apk
+apps/*.aab
